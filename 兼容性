@@ -1,0 +1,14 @@
+事件的兼容
+var ev=ev||window.event;
+取消冒泡的兼容
+if(ev&&ev.stopPropagation){ev.stopPropagation()}
+else{window.event.cancelBubble=true;}
+阻止浏览器默认事件的兼容
+if(ev&&ev.preventDefault){ev.spreventDefault()}
+else{window.event.returnValur=false;}
+滚动条的兼容
+var scroll=document.body.scrollTop||document.documentElement.scrollTop
+获取元素属性的兼容
+getComputedStyle(obj).attr   obj.currentStyle.attr
+键盘事件的兼容
+event.keyCode   event.which
